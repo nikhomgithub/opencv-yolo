@@ -1,0 +1,48 @@
+py01
+ch2 : image: argpase, putText, imwrite
+ch3 : image: print format,
+ch4 : image: roi, pixel, 
+ch5 : image: drawing,zeros,line,retangle,circle,random,
+ch6 : image: 
+      arithmetic: np.ones,np.uint8,add,subtract, 
+      bitwise: and,or,xor,not,zeros,  
+      colorspace: convert color, BGR,HSV,LAB
+      crop: crop, repaint
+      flip: 
+      imultils: func rotate,translate,resize
+      masking:
+      resize:
+      rotate: 
+      translation: 
+      split & merging
+      
+
+
+
+Pysearch
+========
+https://www.youtube.com/watch?v=29vWJ1c9LX8&list=PL6Yc5OUgcoTmTGACTa__vnifNA744Cz-q
+ch4 : image: np.array, roi, grayimage, color of pixel, shape
+ch5 : image: add, addWeighted, cvtColor, threshold
+ch6 : image: threshold, bitwise, add
+ch7 : image: bitwise and, or, xor, not
+ch8 : video: trackbar, putText
+ch9 : video: trackbar-color, mask , rectangle
+ch10: image: threshold binary, inv, ,trunc,tozero
+ch11: image: hist, 
+ch12: image: resize, transpose,rotate,
+ch13: video: circle, perspective transform
+ch16: image: averaging,gaussian,median,bilateral
+objectD_raspi: 
+
+Other
+=====
+contour: https://www.youtube.com/watch?v=FbR9Xr0TVdY
+
+Yolo
+====
+main.py: for yolo algorithm , with cv2 framework , for both image and video (but slow)
+    #git clone https://github.com/pjreddie/darknet
+    need yolov3.weights
+         coco.names
+         yolov3.cfg
