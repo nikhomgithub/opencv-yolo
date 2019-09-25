@@ -1,0 +1,17 @@
+
+import numpy as np
+import cv2
+
+img = cv2.imread('messi5.jpg')
+
+print(img.shape) //return tuple number of rows, columns, channels
+print(img.size) //return tuple number of pixel in image
+print(img.dtype) // return image datatype is obtain
+
+
+
+cv2.imshow('image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+ROI
