@@ -1,0 +1,25 @@
+import cv2
+import numpy as np 
+
+video = cv2.VideoCapture('/home/nikhom/pythonhome/motion_detection/footage.avi')
+
+ret,frame = video.read()
+
+cv2.imshow('origin',frame)
+
+frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+cv2.imshow('frame',frame)
+blurred = cv2.GaussianBlur(frame, (5, 5), 5)
+cv2.imshow('blurred',blurred)
+    
+(T, threshInv) = cv2.threshold(blurred, 155, 255, cv2.THRESH_BINARY_INV)
+cv2.imshow("Threshold Binary Inverse", threshInv)
+
+
+
+while video.isOpened():    
+    if cv2.waitKey(1) & 0xFF==ord('q'):
+        break
+
+video.release()
+cv2.destroyAllWindows()
