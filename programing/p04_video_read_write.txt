@@ -1,0 +1,32 @@
+https://www.youtube.com/watch?v=-RtVZsCvXAQ&list=PLS1QulWo1RIa7D1O6skqDQ-JZ1GGHKK-K&index=5
+
+import cv2
+
+cap = cv2.VideoCapture(0)  //set input 
+fourcc = cv2.VideoWriter_fourcc(*'XVID') //codec code 
+out = cv2.VideoWriter('output.avi',fourcc,20.0, (640,480))  // set output video 20.0 frame per second , 
+
+
+print(cap.isOpened())
+
+while(cap.isOpened()):
+  ret,frame=cap.read()  // ret = return 
+  
+  if(ret):
+ 
+    print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+  
+    out.write(frame)            //BGR mode 
+  
+    gray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    cv2.imshow('frame-gray',gray)
+  
+    if cv2.waitKey(1) & 0xFF == ord('q')
+      break
+  else:
+    break
+  
+cap.release()
+out.release()
+cv2.destroyAllWindows()
